@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ "$1" = "" -a "$2" = "" ]; then
+    echo "Usage: ./run HOST_NAME DOCUMENT_ROOT"
+else
+    docker run -d --name $1 -h $1 -v /etc/localtime:/etc/localtime:ro -v $2:/var/www/html:ro siphilia/apache-php
+fi
+
