@@ -46,3 +46,8 @@ RUN chmod +x /etc/service/postfix/run
 COPY service/postfix/main.cf /etc/postfix/main.cf
 RUN cp /etc/services /var/spool/postfix/etc/services
 
+#--------------------------------------------------#
+# EXPOSE
+#--------------------------------------------------#
+
+EXPOSE 80
